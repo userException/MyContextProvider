@@ -34,7 +34,7 @@ const App = () => {
                   onPress={() => {
                     navigation.navigate('PMCreate');
                   }}>
-                  <Icon style={styles.headerIcon} name="plus" size={25} />
+                  <Icon style={styles.headerIcon} name="plus" size={25} color={'#006ee6'} />
                 </TouchableOpacity>
               );
             },
@@ -50,7 +50,7 @@ const App = () => {
                   onPress={() => {
                     navigation.navigate('PMEdit', {id: route.params.id});
                   }}>
-                  <Icon style={styles.headerIcon} name="edit" size={25} />
+                  <Icon style={styles.headerIcon} name="edit" size={25} color={'#006ee6'} />
                 </TouchableOpacity>
               );
             },

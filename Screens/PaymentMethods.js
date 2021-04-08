@@ -1,11 +1,5 @@
 import React, {useContext} from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import {Context as PaymentMethodContext} from '../Context/PaymentMethodContext';
 import Icon from 'react-native-vector-icons/Feather';
 
@@ -28,14 +22,13 @@ const PaymentMethods = ({navigation}) => {
                 });
               }}>
               <View style={styles.cell}>
-                <Text style={styles.text}>
-                  {item.name} - {item.details}
-                </Text>
+                <Text style={styles.text}>{item.name}</Text>
+                <Text style={styles.text}>{item.details}</Text>
                 <TouchableOpacity
                   onPress={() =>
                     paymentMethods.boundActions.deletePaymentMethod(item.id)
                   }>
-                  <Icon name="trash-2" size={25} />
+                  <Icon name="trash-2" size={25} color={'#006ee6'} />
                 </TouchableOpacity>
               </View>
             </TouchableOpacity>
@@ -59,7 +52,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderBottomWidth: 0.2,
     borderColor: '#999999',
-    paddingVertical: 15,
+    paddingVertical: 25,
     paddingHorizontal: 15,
   },
 });

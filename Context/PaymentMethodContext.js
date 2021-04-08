@@ -39,7 +39,7 @@ const addPaymentMethod = dispatch => {
 
 const deletePaymentMethod = dispatch => {
   return id => {
-    dispatch({type: 'deletePM', payload: id});
+    dispatch({type: 'deletePM', payload: {id}});
   };
 };
 
